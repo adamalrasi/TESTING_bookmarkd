@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { supabase } from "../client";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -59,7 +60,9 @@ const Register = () => {
         <br />
         <button type="submit">REGISTER</button>
       </form>
-      <p>Already have an account? Login</p>
+      <p>
+        Already have an account? <Link to="/Login">Login</Link>
+      </p>
     </div>
   );
 };
